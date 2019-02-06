@@ -1,0 +1,19 @@
+---
+# This playbook prepares the system to be managed by Ansible. There should be no need to call it more than once.
+# Everything else should be handled via site.yml
+#
+# Example:
+#
+#   ansible-playbook -u root bootstrap-template.yml
+
+- name: Prepare template VM to be managed by Ansible
+  hosts: all
+  become: false
+  gather_facts: false
+  vars:
+    dns_server: turris.home.syn-net.org
+  roles:
+    - robertdebock.bootstrap
+    - { role: jkirk.user, users: [ 'jane_doe', 'john_doe' ], groupname: 'sysadmin', admin: True }
+    - jkirk.template
+    - Oefenweb.hostname
