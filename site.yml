@@ -1,0 +1,9 @@
+---
+# NOTE: This playbook includes all defined and tested roles.
+#
+# Example:
+#
+#   ansible-galaxy install -r requirements.yml
+#   ansible-playbook --ask-vault-pass site.yml
+
+- import_playbook: site-base.yml

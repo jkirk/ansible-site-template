@@ -1,0 +1,11 @@
+---
+
+- name: Setup site wide base configuration
+  hosts: site
+  become: yes
+  roles:
+    - jkirk.base
+    - Oefenweb.hostname
+    - { role: jkirk.grml-config, username: "root" }
+    - { role: jkirk.grml-config, username: "jane_doe" }
+    - { role: jkirk.grml-config, username: "john_doe" }
