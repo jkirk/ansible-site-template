@@ -11,7 +11,7 @@
   become: false
   gather_facts: false
   vars:
-    dns_server: turris.home.syn-net.org
+    dns_server: fw.in.example.com
   roles:
     - robertdebock.bootstrap
     - { role: jkirk.user, users: [ 'jane_doe', 'john_doe' ], groupname: 'sysadmin', admin: True }
