@@ -3,10 +3,10 @@
   version: 2.11.0
   name: robertdebock.bootstrap
 - src: https://github.com/jkirk/ansible-role-user.git
-  version: 2374457e21a8324b791069a6044292bc3310ecd1
+  version: ddc9437
   name: jkirk.user
 - src: https://github.com/jkirk/ansible-role-base.git
-  version: 3cd6444
+  version: ded16c9
   name: jkirk.base
 - src: https://github.com/jkirk/ansible-role-grml-config.git
   version: bf34cce
