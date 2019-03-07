@@ -1,5 +1,7 @@
 # Ansible site template
 
+[![language de](https://img.shields.io/badge/language-de-green.svg)](README.de.md)
+
 Ziel dieses Templates ist es, den Start von Ansible in einer neuen Infrastruktur zu erleichtern.
 
 ## Einleitung
