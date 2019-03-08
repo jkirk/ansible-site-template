@@ -6,7 +6,7 @@ Ziel dieses Templates ist es, den Start von Ansible in einer neuen Infrastruktur
 
 ## Einleitung
 
-Ausgangslage ist in der Regel ein einfacher Debian/stretch-Server. Idealerweise handelt es sich dabei um eine mit `grml-deboostrap` erstellte Minimal-Installation.
+Ausgangslage ist in der Regel ein einfacher Debian/stretch-Server. Idealerweise handelt es sich dabei um eine mit [grml-deboostrap](https://github.com/grml/grml-debootstrap) erstellte Minimal-Installation.
 (Natürlich können auch "legacy" System verwaltet werden, allerdings müssen die dabei entstehenden Veränderungen des Systems etwas genau beobachtet werden, um keine unerwarteten Seiten-Effekte zu verursachen.
 Dafür gibt es dann die "--check"-Option).
 
@@ -22,16 +22,36 @@ Zusammengefasst passiert beim "bootstrapping" folgendes:
 * Administrations-User werden angelegt
 * Bei template-VMs: Keys, IDs, etc werden neu generiert
 
+## Vorrausetzungen
+
+* SSH ist im Zielsystem installiert und root-login ist möglich (entweder durch Passwort-Eingabe (`PermitRootLogin yes`) oder Public-Key-Authentication (`/root/.ssh/authorized_keys`))
+* DNS ist konfiguriert und man kann sich per `ssh root@myserver01.example.com` am Zielsystem einloggen
+
 ## Quick-Start
 
 ```
-  $ git clone --depth=1 --branch=master https://github.com/jkirk/ansible-site-template myproject-ansible
-  $ rm -rf ./myproject-ansible/.git
-  $ cd ./myproject-ansible
-  $ ansible-galaxy -r requirements.yml install
+  % git clone --depth=1 --branch=master https://github.com/jkirk/ansible-site-template myproject-ansible
+  % rm -rf ./myproject-ansible/.git
+  % cd ./myproject-ansible
+  % ansible-galaxy -r requirements.yml install
+```
+
+* `myserver01.example.com` der [hosts](hosts) Datei hinzufügen (bzw mit `host.example.com` ersetzen)
+* Administrations-User in [bootstrap.yml](bootstrap.yml#L15) eintragen
+
+```
+  % ansible-playbook -D -u root --limit myserver01.example.com bootstrap.yml
+  [...]
+  myserver01.example.com : ok=25   changed=9    unreachable=0    failed=0
+  % ansible-playbook -D -u root --limit myserver01.example.com bootstrap.yml
+  [...]
+  myserver01.example.com : ok=24   changed=0    unreachable=0    failed=0
 ```
 
 ## Ansible-Rollen
 
 * [robertdebock/ansible-role-bootstrap](https://github.com/robertdebock/ansible-role-bootstrap)
 * [jkirk/ansible-role-user](https://github.com/jkirk/ansible-role-user)
+* [jkirk/ansible-role-base](https://github.com/jkirk/ansible-role-base)
+* [Oefenweb/ansible-hostname](https://github.com/Oefenweb/ansible-hostname)
+* [jkirk/ansible-role-grml-config](https://github.com/jkirk/ansible-role-grml-config)
