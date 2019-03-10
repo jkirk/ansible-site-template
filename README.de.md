@@ -37,7 +37,7 @@ Zusammengefasst passiert beim "bootstrapping" folgendes:
 ```
 
 * `myserver01.example.com` der [hosts](hosts) Datei hinzufügen (bzw mit `host.example.com` ersetzen)
-* Administrations-User in [bootstrap.yml](bootstrap.yml#L15) eintragen
+* Administrations-User in [bootstrap.yml](bootstrap.yml#L16) eintragen
 
 ```
   % ansible-playbook -D -u root --limit myserver01.example.com bootstrap.yml
