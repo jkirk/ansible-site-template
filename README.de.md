@@ -55,3 +55,4 @@ Zusammengefasst passiert beim "bootstrapping" folgendes:
 * [jkirk/ansible-role-base](https://github.com/jkirk/ansible-role-base)
 * [Oefenweb/ansible-hostname](https://github.com/Oefenweb/ansible-hostname)
 * [jkirk/ansible-role-grml-config](https://github.com/jkirk/ansible-role-grml-config)
+* [jkirk/ansible-role-proxmox](https://github.com/jkirk/ansible-role-proxmox)

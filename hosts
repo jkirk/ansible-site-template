@@ -1,2 +1,5 @@
 [site]
 host.example.com
+
+[proxmox]
+proxmox.example.com

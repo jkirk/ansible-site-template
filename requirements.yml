@@ -17,4 +17,6 @@
 - src: https://github.com/Oefenweb/ansible-hostname.git
   name: Oefenweb.hostname
   version: 04388545
-
+- src: https://github.com/jkirk/ansible-role-proxmox
+  name: jkirk.proxmox
+  version: b45c271
