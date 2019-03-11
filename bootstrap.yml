@@ -11,6 +11,6 @@
   become: false
   gather_facts: false
   roles:
-    - robertdebock.bootstrap
+    - role: robertdebock.bootstrap
       bootstrap_remote_user: root
     - { role: jkirk.user, users: [ 'jane_doe', 'john_doe' ], groupname: 'sysadmin', admin: True }
