@@ -6,15 +6,15 @@ Ziel dieses Templates ist es, den Start von Ansible in einer neuen Infrastruktur
 
 ## Einleitung
 
-Ausgangslage ist in der Regel ein einfacher Debian/stretch-Server. Idealerweise handelt es sich dabei um eine mit [grml-deboostrap](https://github.com/grml/grml-debootstrap) erstellte Minimal-Installation.
-(Natürlich können auch "legacy" System verwaltet werden, allerdings müssen die dabei entstehenden Veränderungen des Systems etwas genau beobachtet werden, um keine unerwarteten Seiten-Effekte zu verursachen.
+Ausgangslage ist in der Regel ein Debian/stretch-Server. Idealerweise handelt es sich dabei um eine mit [grml-deboostrap](https://github.com/grml/grml-debootstrap) erstellte Minimal-Installation.
+(Natürlich können auch "legacy" System verwaltet werden, allerdings müssen die beim Deployment entstehenden Veränderungen des Systems genauer beobachtet werden, um keine unerwarteten Seiteneffekte zu verursachen.
 Dafür gibt es dann die "--check"-Option).
 
-Damit Ansible funktioniert müssen ein paar Basis-Programme und Konfigurationen installiert und eingerichtet werden. Dieser Prozess nennt sich "bootstrapping".
+Damit Ansible funktioniert, müssen ein paar Basis-Programme und Konfigurationen installiert und eingerichtet werden. Dieser Prozess nennt sich "bootstrapping".
 
-Wir unterscheiden im Moment zwei Arten von "bootstrapping", die eine bezieht sich auf frisch installierte (physische) Server, die andere auf sogenannte "template-VMs".
+Wir unterscheiden im Moment zwei Arten von "bootstrapping", die eine Art bezieht sich auf frisch installierte (physische) Server, die andere auf sogenannte "template-VMs".
 Bei den template-VMs wird die VM von einer Vorlage (template) gecloned und von dort weg konfiguriert.
-Im Unterschied zum frisch installierten Server muss sichergestellt werden, dass z.B. private Schlüssel, IDs, etc. neu generiert werden.
+Im Unterschied zum frisch installierten (physischen) Server muss sichergestellt werden, dass z.B. private Schlüssel, IDs, etc. neu generiert werden.
 
 Zusammengefasst passiert beim "bootstrapping" folgendes:
 
@@ -24,7 +24,7 @@ Zusammengefasst passiert beim "bootstrapping" folgendes:
 
 ## Vorrausetzungen
 
-* SSH ist im Zielsystem installiert und root-login ist möglich (entweder durch Passwort-Eingabe (`PermitRootLogin yes`) oder Public-Key-Authentication (`/root/.ssh/authorized_keys`))
+* SSH ist im Zielsystem installiert und root-login ist möglich (entweder durch Passwort-Eingabe (`PermitRootLogin yes`) oder Public-Key-Authentication (`/root/.ssh/authorized_keys`)
 * DNS ist konfiguriert und man kann sich per `ssh root@myserver01.example.com` am Zielsystem einloggen
 
 ## Quick-Start
