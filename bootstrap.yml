@@ -10,6 +10,8 @@
   hosts: all
   become: false
   gather_facts: false
+  vars:
+    dns_server: fw.in.example.com
   roles:
     - role: robertdebock.bootstrap
       bootstrap_remote_user: root

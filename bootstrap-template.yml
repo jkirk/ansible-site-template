@@ -17,4 +17,15 @@
       bootstrap_remote_user: root
     - { role: jkirk.user, users: [ 'jane_doe', 'john_doe' ], groupname: 'sysadmin', admin: True }
     - jkirk.template
+  tasks:
+    - name: Install dbus (needed for Oefenweb.hostname)
+      apt:
+        name: dbus
+        state: present
+
+- name: Setup hostname on template VM to be managed by Ansible
+  hosts: all
+  become: false
+  gather_facts: false
+  roles:
     - Oefenweb.hostname
