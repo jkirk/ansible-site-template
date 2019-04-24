@@ -1,5 +1,6 @@
 # Ansible site template
 
+[![language en](https://img.shields.io/badge/language-en-red.svg)](README.md)
 [![language de](https://img.shields.io/badge/language-de-green.svg)](README.de.md)
 
 Ziel dieses Templates ist es, den Start von Ansible in einer neuen Infrastruktur zu erleichtern.
@@ -36,16 +37,17 @@ Zusammengefasst passiert beim "bootstrapping" folgendes:
   % ansible-galaxy -r requirements.yml install
 ```
 
-* `myserver01.example.com` der [hosts](hosts) Datei hinzufügen (bzw mit `host.example.com` ersetzen)
-* Administrations-User in [bootstrap.yml](bootstrap.yml#L16) eintragen
+* Host `myserver01.example.com` in [hosts](hosts) eintragen
+* Administrations-User in [bootstrap.yml](bootstrap.yml#L18) bzw [bootstrap-template.yml](bootstrap-template.yml#L18) eintragen
+* Public SSH-Key in `files/ssh/$USERNAME.pub` hinterlegen
+* DNS-Server in [bootstrap.yml](bootstrap.yml#L14) bzw [bootstrap-template.yml](bootstrap-template.yml#L14) eintragen
 
 ```
-  % ansible-playbook -D -u root --limit myserver01.example.com bootstrap.yml
+  % ansible-playbook -D -u root --limit myserver01.example.com bootstrap.yml # bei Public-Key-Authentication
   [...]
-  myserver01.example.com : ok=25   changed=9    unreachable=0    failed=0
-  % ansible-playbook -D -u root --limit myserver01.example.com bootstrap.yml
+
+  % ansible-playbook -D -u root -k --limit myserver01.example.com bootstrap.yml # mit Passwort-Eingabe
   [...]
-  myserver01.example.com : ok=24   changed=0    unreachable=0    failed=0
 ```
 
 ## Ansible-Rollen

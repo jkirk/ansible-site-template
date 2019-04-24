@@ -10,3 +10,12 @@ It should hold and describe everything to get you started.
 ## UNRELEASED
 
 Please note that this template is currently work in progress.
+
+## Ansible roles
+
+* [robertdebock/ansible-role-bootstrap](https://github.com/robertdebock/ansible-role-bootstrap)
+* [jkirk/ansible-role-user](https://github.com/jkirk/ansible-role-user)
+* [jkirk/ansible-role-base](https://github.com/jkirk/ansible-role-base)
+* [Oefenweb/ansible-hostname](https://github.com/Oefenweb/ansible-hostname)
+* [jkirk/ansible-role-grml-config](https://github.com/jkirk/ansible-role-grml-config)
+* [jkirk/ansible-role-proxmox](https://github.com/jkirk/ansible-role-proxmox)
