@@ -20,3 +20,5 @@
 - src: https://github.com/jkirk/ansible-role-proxmox
   name: jkirk.proxmox
   version: 9c2bc8d
+- src: jnv.unattended-upgrades
+  version: v1.7.0

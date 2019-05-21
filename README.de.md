@@ -58,3 +58,4 @@ Zusammengefasst passiert beim "bootstrapping" folgendes:
 * [Oefenweb/ansible-hostname](https://github.com/Oefenweb/ansible-hostname)
 * [jkirk/ansible-role-grml-config](https://github.com/jkirk/ansible-role-grml-config)
 * [jkirk/ansible-role-proxmox](https://github.com/jkirk/ansible-role-proxmox)
+* [jnv.unattended-upgrades](https://github.com/jnv/ansible-role-unattended-upgrades)
