@@ -7,4 +7,5 @@
 #   ansible-playbook --ask-vault-pass site.yml
 
 - import_playbook: site-base.yml
+- import_playbook: site-upgrades.yml
 - import_playbook: site-proxmox.yml

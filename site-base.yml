@@ -4,8 +4,8 @@
   hosts: site
   become: yes
   roles:
-    - jkirk.base
-    - Oefenweb.hostname
+    - role: jkirk.base
+    - role: Oefenweb.hostname
     - { role: jkirk.grml-config, username: "root" }
     - { role: jkirk.grml-config, username: "jane_doe" }
     - { role: jkirk.grml-config, username: "john_doe" }
