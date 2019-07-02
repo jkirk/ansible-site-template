@@ -60,3 +60,5 @@ Zusammengefasst passiert beim "bootstrapping" folgendes:
 * [jkirk/ansible-role-proxmox](https://github.com/jkirk/ansible-role-proxmox)
 * [jnv.unattended-upgrades](https://github.com/jnv/ansible-role-unattended-upgrades)
 * [donat-b/ansible-restic-rest](https://github.com/donat-b/ansible-restic-rest)
+* [paulfantom/ansible-restic](https://github.com/paulfantom/ansible-restic)
+* [shibumi/ansible-systemd-conf](https://github.com/shibumi/ansible-systemd-conf)

@@ -1,0 +1,43 @@
+---
+# NOTE: ansible playbook for backup01
+#
+#   ansible-galaxy install -r requirements.yml
+#   ansible-playbook -C -D site-backup01.yml
+
+- name: Setup backup configuration
+  hosts: backup
+  become: yes
+  roles:
+    - role: paulfantom.restic
+      restic_version: '0.9.5'
+    - role: donat-b.restic-rest
+      restic_rest_v: '0.9.7'
+      restic_rest_repos:
+        - path: '/srv/backups/restic/backup01'
+          listen: ':8000'
+          args: '--append-only --prometheus'
+    - role: systemd-conf
+      systemd_conf_timer:
+        restic-backup-prune:
+          - Unit:
+            - Description: "Weekly restic backup prune"
+          - Timer:
+            - OnCalendar: "Sun *-*-* 12:00"
+            - Persistent: "True"
+          - Install:
+            - WantedBy: "timers.target"
+      systemd_conf_service:
+        restic-backup-prune:
+          - Unit:
+            - Description: "Weekly restic backup prune"
+          - Service:
+            - Type: "oneshot"
+            - ExecStart: "/usr/local/bin/restic --password-file /root/.restic_data_password -r /srv/backups/restic/backup01 forget --keep-daily 30 --keep-weekly 8 --keep-monthly 12 --keep-yearly 75 --keep-last 60 --prune"
+  tasks:
+    - name: "Enable and start timers/services"
+      service:
+        name: "{{ item }}"
+        state: started
+        enabled: true
+      with_items:
+        - restic-backup-prune.timer
