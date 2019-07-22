@@ -11,7 +11,20 @@ It should hold and describe everything to get you started.
 
 Please note that this template is currently work in progress.
 
-## Ansible roles
+## Quick-Start
+
+```
+  % git clone --depth=1 --branch=master https://github.com/jkirk/ansible-site-template myproject-ansible
+  % rm -rf ./myproject-ansible/.git
+  % cd ./myproject-ansible
+  % ansible-galaxy -r requirements.yml install
+```
+
+* Add host `myserver01.example.com` to [hosts](hosts)
+* Add administrations user in [bootstrap.yml](bootstrap.yml#L18) resp. [bootstrap-template.yml](bootstrap-template.yml#L18)
+* Add public SSH-key in `files/ssh/$USERNAME.pub`
+
+## Overview Ansible roles
 
 * [robertdebock/ansible-role-bootstrap](https://github.com/robertdebock/ansible-role-bootstrap)
 * [jkirk/ansible-role-user](https://github.com/jkirk/ansible-role-user)
@@ -23,3 +36,23 @@ Please note that this template is currently work in progress.
 * [donat-b/ansible-restic-rest](https://github.com/donat-b/ansible-restic-rest)
 * [paulfantom/ansible-restic](https://github.com/paulfantom/ansible-restic)
 * [shibumi/ansible-systemd-conf](https://github.com/shibumi/ansible-systemd-conf)
+
+### bootstrap
+
+* Review DNS server in [bootstrap.yml](bootstrap.yml#L14) resp. [bootstrap-template.yml](bootstrap-template.yml#L14)
+
+```
+  % ansible-playbook -D -u root --limit myserver01.example.com bootstrap.yml # with public key authentication
+  [...]
+
+  % ansible-playbook -D -u root -k --limit myserver01.example.com bootstrap.yml # with password authentication
+  [...]
+```
+
+### jnv.unattended-upgrades
+
+* Review [site-upgrades.yml](site-upgrades.yml)
+
+```
+  % ansible-playbook -D --limit myserver01.example.com site-upgrades.yml
+```
