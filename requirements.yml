@@ -31,3 +31,6 @@
 - src: shibumi.systemd-conf
   version: c233062
   name: systemd-conf
+- src: https://github.com/jkirk/ansible-role-letsencrypt
+  name: jkirk.letsencrypt
+  version: 51f6e0d

@@ -36,6 +36,7 @@ Please note that this template is currently work in progress.
 * [donat-b/ansible-restic-rest](https://github.com/donat-b/ansible-restic-rest)
 * [paulfantom/ansible-restic](https://github.com/paulfantom/ansible-restic)
 * [shibumi/ansible-systemd-conf](https://github.com/shibumi/ansible-systemd-conf)
+* [jkirk.letsencrypt](https://github.com/jkirk/ansible-role-letsencrypt)
 
 ### bootstrap
 
@@ -55,4 +56,12 @@ Please note that this template is currently work in progress.
 
 ```
   % ansible-playbook -D --limit myserver01.example.com site-upgrades.yml
+```
+
+### jkirk.letsencrypt
+
+```yaml
+    - hosts: website
+      roles:
+        - { role: jkirk.letsencrypt, letsencrypt_domains: [ 'demo.example.com' ] }
 ```
