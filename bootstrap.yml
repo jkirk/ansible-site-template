@@ -14,5 +14,4 @@
     dns_server: fw.in.example.com
   roles:
     - role: robertdebock.bootstrap
-      bootstrap_remote_user: root
     - { role: jkirk.user, users: [ 'jane_doe', 'john_doe' ], groupname: 'sysadmin', admin: True }

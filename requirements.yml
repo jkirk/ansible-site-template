@@ -1,6 +1,6 @@
 ---
 - src: https://github.com/robertdebock/ansible-role-bootstrap.git
-  version: 3.0.0
+  version: 3.4.4
   name: robertdebock.bootstrap
 - src: https://github.com/jkirk/ansible-role-user.git
   version: ddc9437
