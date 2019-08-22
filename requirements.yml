@@ -6,7 +6,7 @@
   version: ddc9437
   name: jkirk.user
 - src: https://github.com/jkirk/ansible-role-base.git
-  version: ded16c9
+  version: 697c8bd
   name: jkirk.base
 - src: https://github.com/jkirk/ansible-role-grml-config.git
   version: bf34cce
