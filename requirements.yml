@@ -9,7 +9,7 @@
   version: 697c8bd
   name: jkirk.base
 - src: https://github.com/jkirk/ansible-role-grml-config.git
-  version: bf34cce
+  version: ca0c35d
   name: jkirk.grml-config
 - src: https://github.com/jkirk/ansible-role-template.git
   version: 65e9537
@@ -19,7 +19,7 @@
   version: 04388545
 - src: https://github.com/jkirk/ansible-role-proxmox
   name: jkirk.proxmox
-  version: f5152b2
+  version: 23be98a
 - src: jnv.unattended-upgrades
   version: v1.7.1
 - src: https://github.com/donat-b/ansible-restic-rest.git
