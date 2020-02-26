@@ -1,36 +1,33 @@
 ---
-- src: https://github.com/robertdebock/ansible-role-bootstrap.git
-  version: 3.4.4
-  name: robertdebock.bootstrap
-- src: https://github.com/jkirk/ansible-role-user.git
-  version: ddc9437
-  name: jkirk.user
 - src: https://github.com/jkirk/ansible-role-base.git
-  version: 697c8bd
+  version: a3ef95a
   name: jkirk.base
 - src: https://github.com/jkirk/ansible-role-grml-config.git
   version: ca0c35d
   name: jkirk.grml-config
+- src: https://github.com/jkirk/ansible-role-proxmox
+  name: jkirk.proxmox
+  version: 8d0a7b9
 - src: https://github.com/jkirk/ansible-role-template.git
-  version: 65e9537
+  version: 895ccca
   name: jkirk.template
+- src: https://github.com/jkirk/ansible-role-user.git
+  version: ddc9437
+  name: jkirk.user
+- src: https://github.com/donat-b/ansible-restic-rest.git
+  version: 3e98790
+  name: donat-b.restic-rest
+- src: jnv.unattended-upgrades
+  version: v1.7.1
 - src: https://github.com/Oefenweb/ansible-hostname.git
   name: Oefenweb.hostname
   version: 04388545
-- src: https://github.com/jkirk/ansible-role-proxmox
-  name: jkirk.proxmox
-  version: 23be98a
-- src: jnv.unattended-upgrades
-  version: v1.7.1
-- src: https://github.com/donat-b/ansible-restic-rest.git
-  version: 3bc4aa5
-  name: donat-b.restic-rest
 - src: https://github.com/paulfantom/ansible-restic
-  version: 740c00e
+  version: 1f93948
   name: paulfantom.restic
+- src: https://github.com/robertdebock/ansible-role-bootstrap.git
+  version: 3.4.4
+  name: robertdebock.bootstrap
 - src: shibumi.systemd-conf
   version: c233062
   name: systemd-conf
-- src: https://github.com/jkirk/ansible-role-letsencrypt
-  name: jkirk.letsencrypt
-  version: 51f6e0d
