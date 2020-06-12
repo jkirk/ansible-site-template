@@ -7,7 +7,7 @@
   name: jkirk.grml-config
 - src: https://github.com/jkirk/ansible-role-proxmox
   name: jkirk.proxmox
-  version: 8d0a7b9
+  version: 73c832d
 - src: https://github.com/jkirk/ansible-role-template.git
   version: 895ccca
   name: jkirk.template
