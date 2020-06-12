@@ -7,36 +7,36 @@ This is a template to use Ansible in your environment.
 
 It should hold and describe everything to get you started.
 
-## UNRELEASED
-
-Please note that this template is currently work in progress.
-
 ## Quick-Start
 
 ```
   % git clone --depth=1 --branch=master https://github.com/jkirk/ansible-site-template myproject-ansible
-  % rm -rf ./myproject-ansible/.git
   % cd ./myproject-ansible
+  % rm README.*
+  % git remote rm origin
   % ansible-galaxy -r requirements.yml install
+  % git commit
 ```
 
-* Add host `myserver01.example.com` to [hosts](hosts)
 * Add administrations user in [bootstrap.yml](bootstrap.yml#L18) resp. [bootstrap-template.yml](bootstrap-template.yml#L18)
+* Remove or update the role `jkirk.grml-config` in [site-base.yml](site-base.yml)
+* Update [hosts](hosts)
 * Add public SSH-key in `files/ssh/$USERNAME.pub`
 
 ## Overview Ansible roles
 
-* [robertdebock/ansible-role-bootstrap](https://github.com/robertdebock/ansible-role-bootstrap)
-* [jkirk/ansible-role-user](https://github.com/jkirk/ansible-role-user)
-* [jkirk/ansible-role-base](https://github.com/jkirk/ansible-role-base)
 * [Oefenweb/ansible-hostname](https://github.com/Oefenweb/ansible-hostname)
+* [donat-b/ansible-restic-rest](https://github.com/donat-b/ansible-restic-rest)
+* [jkirk.letsencrypt](https://github.com/jkirk/ansible-role-letsencrypt)
+* [jkirk/ansible-role-base](https://github.com/jkirk/ansible-role-base)
 * [jkirk/ansible-role-grml-config](https://github.com/jkirk/ansible-role-grml-config)
 * [jkirk/ansible-role-proxmox](https://github.com/jkirk/ansible-role-proxmox)
+* [jkirk/ansible-role-template](https://github.com/jkirk/ansible-role-template)
+* [jkirk/ansible-role-user](https://github.com/jkirk/ansible-role-user)
 * [jnv.unattended-upgrades](https://github.com/jnv/ansible-role-unattended-upgrades)
-* [donat-b/ansible-restic-rest](https://github.com/donat-b/ansible-restic-rest)
 * [paulfantom/ansible-restic](https://github.com/paulfantom/ansible-restic)
+* [robertdebock/ansible-role-bootstrap](https://github.com/robertdebock/ansible-role-bootstrap)
 * [shibumi/ansible-systemd-conf](https://github.com/shibumi/ansible-systemd-conf)
-* [jkirk.letsencrypt](https://github.com/jkirk/ansible-role-letsencrypt)
 
 ### bootstrap
 
@@ -49,6 +49,8 @@ Please note that this template is currently work in progress.
   % ansible-playbook -D -u root -k --limit myserver01.example.com bootstrap.yml # with password authentication
   [...]
 ```
+
+Please note, that when running in check-mode the playbook most probably fails because of missing dbus. See: Oefenweb/ansible-hostname#12.
 
 ### jnv.unattended-upgrades
 
