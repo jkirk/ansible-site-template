@@ -2,6 +2,8 @@
 # This playbook prepares the system to be managed by Ansible. There should be no need to call it more than once.
 # Everything else should be handled via site.yml
 #
+# Make sure that the variable dns_server is defined (i.e. in group_vars/all)
+#
 # Example:
 #
 #   ansible-playbook -u root bootstrap.yml
@@ -10,8 +12,6 @@
   hosts: all
   become: false
   gather_facts: false
-  vars:
-    dns_server: fw.in.example.com
   roles:
     - role: robertdebock.bootstrap
     - { role: jkirk.user, users: [ 'jane_doe', 'john_doe' ], groupname: 'sysadmin', admin: True }
