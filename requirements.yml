@@ -5,7 +5,10 @@
 - src: https://github.com/jkirk/ansible-role-grml-config.git
   version: ca0c35d
   name: jkirk.grml-config
-- src: https://github.com/jkirk/ansible-role-proxmox
+- src: https://github.com/jkirk/ansible-role-letsencrypt.git
+  version: 51f6e0d
+  name: jkirk.letsencrypt
+- src: https://github.com/jkirk/ansible-role-proxmox.git
   name: jkirk.proxmox
   version: 73c832d
 - src: https://github.com/jkirk/ansible-role-template.git
@@ -14,20 +17,20 @@
 - src: https://github.com/jkirk/ansible-role-user.git
   version: ddc9437
   name: jkirk.user
-- src: https://github.com/jkirk/ansible-restic-rest
+- src: https://github.com/jkirk/ansible-restic-rest.git
   version: 3bec887
   name: donat-b.restic-rest
 - src: jnv.unattended-upgrades
   version: v1.7.1
 - src: https://github.com/Oefenweb/ansible-hostname.git
-  name: Oefenweb.hostname
   version: 04388545
-- src: https://github.com/paulfantom/ansible-restic
+  name: Oefenweb.hostname
+- src: https://github.com/paulfantom/ansible-restic.git
   version: 1f93948
   name: paulfantom.restic
 - src: https://github.com/robertdebock/ansible-role-bootstrap.git
-  version: 3.4.4
+  version: 4.1.5
   name: robertdebock.bootstrap
 - src: shibumi.systemd-conf
   version: c233062
-  name: systemd-conf
+  name: shibumi.systemd-conf
