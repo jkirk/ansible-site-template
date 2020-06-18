@@ -34,7 +34,7 @@ It should hold and describe everything to get you started.
 * [jkirk/ansible-role-template](https://github.com/jkirk/ansible-role-template)
 * [jkirk/ansible-role-user](https://github.com/jkirk/ansible-role-user)
 * [jnv.unattended-upgrades](https://github.com/jnv/ansible-role-unattended-upgrades)
-* [paulfantom/ansible-restic](https://github.com/paulfantom/ansible-restic)
+* [paulfantom/ansible-restic](https://github.com/jkirk/ansible-restic.git)
 * [robertdebock/ansible-role-bootstrap](https://github.com/robertdebock/ansible-role-bootstrap)
 * [shibumi/ansible-systemd-conf](https://github.com/shibumi/ansible-systemd-conf)
 
