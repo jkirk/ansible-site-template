@@ -20,8 +20,9 @@
 - src: https://github.com/jkirk/ansible-restic-rest.git
   version: 3bec887
   name: donat-b.restic-rest
-- src: jnv.unattended-upgrades
-  version: v1.8.0
+- src: https://github.com/jkirk/ansible-role-unattended-upgrades.git
+  version: bbe5b52
+  name: jnv.unattended-upgrades
 - src: https://github.com/Oefenweb/ansible-hostname.git
   version: 04388545
   name: Oefenweb.hostname
