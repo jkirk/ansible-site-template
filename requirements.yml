@@ -9,8 +9,8 @@
   version: 51f6e0d
   name: jkirk.letsencrypt
 - src: https://github.com/jkirk/ansible-role-proxmox.git
+  version: 20696d8
   name: jkirk.proxmox
-  version: 73c832d
 - src: https://github.com/jkirk/ansible-role-template.git
   version: 895ccca
   name: jkirk.template
