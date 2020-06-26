@@ -26,10 +26,10 @@ It should hold and describe everything to get you started.
 ## Overview Ansible roles
 
 * [Oefenweb/ansible-hostname](https://github.com/Oefenweb/ansible-hostname)
-* [donat-b/ansible-restic-rest](https://github.com/donat-b/ansible-restic-rest), see: https://github.com/jkirk/ansible-restic-rest/tree/start-on-boot
-* [jkirk/ansible-role-letsencrypt](https://github.com/jkirk/ansible-role-letsencrypt)
+* [donat-b/ansible-restic-rest](https://github.com/donat-b/ansible-restic-rest)
 * [jkirk/ansible-role-base](https://github.com/jkirk/ansible-role-base)
 * [jkirk/ansible-role-grml-config](https://github.com/jkirk/ansible-role-grml-config)
+* [jkirk/ansible-role-letsencrypt](https://github.com/jkirk/ansible-role-letsencrypt)
 * [jkirk/ansible-role-proxmox](https://github.com/jkirk/ansible-role-proxmox)
 * [jkirk/ansible-role-template](https://github.com/jkirk/ansible-role-template)
 * [jkirk/ansible-role-user](https://github.com/jkirk/ansible-role-user)
