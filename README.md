@@ -25,7 +25,6 @@ It should hold and describe everything to get you started.
 
 ## Overview Ansible roles
 
-* [Oefenweb/ansible-hostname](https://github.com/Oefenweb/ansible-hostname)
 * [donat-b/ansible-restic-rest](https://github.com/donat-b/ansible-restic-rest)
 * [jkirk/ansible-role-base](https://github.com/jkirk/ansible-role-base)
 * [jkirk/ansible-role-grml-config](https://github.com/jkirk/ansible-role-grml-config)
@@ -34,6 +33,7 @@ It should hold and describe everything to get you started.
 * [jkirk/ansible-role-template](https://github.com/jkirk/ansible-role-template)
 * [jkirk/ansible-role-user](https://github.com/jkirk/ansible-role-user)
 * [jnv.unattended-upgrades](https://github.com/jnv/ansible-role-unattended-upgrades)
+* [Oefenweb/ansible-hostname](https://github.com/Oefenweb/ansible-hostname)
 * [paulfantom/ansible-restic](https://github.com/jkirk/ansible-restic.git)
 * [robertdebock/ansible-role-bootstrap](https://github.com/robertdebock/ansible-role-bootstrap)
 * [shibumi/ansible-systemd-conf](https://github.com/shibumi/ansible-systemd-conf)
