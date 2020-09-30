@@ -21,7 +21,7 @@
   version: ddc9437
   name: jkirk.user
 - src: https://github.com/jkirk/ansible-role-website.git
-  version: 3d871db
+  version: 033597d
   name: jkirk.website
 - src: https://github.com/jnv/ansible-role-unattended-upgrades.git
   version: 392df31

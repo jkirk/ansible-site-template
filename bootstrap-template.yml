@@ -12,6 +12,7 @@
   gather_facts: false
   vars:
     dns_server: fw.in.example.com
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
   roles:
     - role: robertdebock.bootstrap
       bootstrap_remote_user: root
