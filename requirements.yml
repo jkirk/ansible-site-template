@@ -26,8 +26,8 @@
 - src: https://github.com/jnv/ansible-role-unattended-upgrades.git
   version: 392df31
   name: jnv.unattended-upgrades
-- src: https://github.com/Oefenweb/ansible-hostname.git
-  version: 04388545
+- src: https://github.com/jkirk/ansible-hostname.git
+  version: da73f49
   name: Oefenweb.hostname
 - src: https://github.com/jkirk/ansible-restic.git
   version: 29347ad
