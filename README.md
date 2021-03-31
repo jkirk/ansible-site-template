@@ -9,19 +9,18 @@ It should hold and describe everything to get you started.
 
 ## Quick-Start
 
-```
+```console
   % git clone --depth=1 --branch=master https://github.com/jkirk/ansible-site-template myproject-ansible
+  % rm -rf ./myproject-ansible/.git
   % cd ./myproject-ansible
-  % rm README.*
-  % git remote rm origin
   % ansible-galaxy -r requirements.yml install
-  % git commit
 ```
 
 * Add administrations user in [bootstrap.yml](bootstrap.yml#L18) resp. [bootstrap-template.yml](bootstrap-template.yml#L18)
-* Remove or update the role `jkirk.grml-config` in [site-base.yml](site-base.yml)
+* Update [site-base.yml](site-base.yml)
 * Update [hosts](hosts)
 * Add public SSH-key in `files/ssh/$USERNAME.pub`
+* (optional) Set the variable `template_dns_server` (i.e. via `group_vars/all`)
 
 ## Overview Ansible roles
 
@@ -43,7 +42,7 @@ It should hold and describe everything to get you started.
 
 * Review DNS server in [bootstrap.yml](bootstrap.yml#L14) resp. [bootstrap-template.yml](bootstrap-template.yml#L14)
 
-```
+```console
   % ansible-playbook -D -u root --limit myserver01.example.com bootstrap.yml # with public key authentication
   [...]
 
@@ -57,7 +56,7 @@ Please note, that when running in check-mode the playbook most probably fails be
 
 * Review [site-upgrades.yml](site-upgrades.yml)
 
-```
+```console
   % ansible-playbook -D --limit myserver01.example.com site-upgrades.yml
 ```
 
