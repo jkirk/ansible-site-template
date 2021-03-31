@@ -15,7 +15,7 @@
   version: 244ce630
   name: jkirk.proxmox
 - src: https://github.com/jkirk/ansible-role-template.git
-  version: 6db48c7
+  version: 79a2acb
   name: jkirk.template
 - src: https://github.com/jkirk/ansible-role-user.git
   version: 96e01ca
@@ -26,14 +26,14 @@
 - src: https://github.com/jnv/ansible-role-unattended-upgrades.git
   version: 392df31
   name: jnv.unattended-upgrades
-- src: https://github.com/jkirk/ansible-hostname.git
-  version: da73f49
+- src: https://github.com/Oefenweb/ansible-hostname
+  version: fd9e966
   name: Oefenweb.hostname
 - src: https://github.com/jkirk/ansible-restic.git
   version: c9ce00a
   name: paulfantom.restic
 - src: https://github.com/robertdebock/ansible-role-bootstrap.git
-  version: 4.2.1
+  version: 5.0.3
   name: robertdebock.bootstrap
 - src: shibumi.systemd-conf
   version: c233062

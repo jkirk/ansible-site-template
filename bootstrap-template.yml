@@ -2,7 +2,9 @@
 # This playbook prepares the system to be managed by Ansible. There should be no need to call it more than once.
 # Everything else should be handled via site.yml
 #
-# Make sure that the variable dns_server is defined (i.e. in group_vars/all)
+# Make sure that the variable dns_server is defined (i.e. in group_vars/all).
+#
+# Please note that this ansible playbook fails when running with mitogen.
 #
 # Example:
 #
@@ -19,14 +21,4 @@
     - role: robertdebock.bootstrap
     - { role: jkirk.user, users: [ 'jane_doe', 'john_doe' ], groupname: 'sysadmin', admin: True }
     - jkirk.template
-  tasks:
-    - name: Install dbus (needed for Oefenweb.hostname)
-      apt:
-        name: dbus
-        state: present
-
-- name: Setup hostname on template VM to be managed by Ansible
-  hosts: all
-  gather_facts: false
-  roles:
     - Oefenweb.hostname
