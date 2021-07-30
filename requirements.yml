@@ -15,7 +15,7 @@
   version: 244ce630
   name: jkirk.proxmox
 - src: https://github.com/jkirk/ansible-role-template.git
-  version: 79a2acb
+  version: da52113
   name: jkirk.template
 - src: https://github.com/jkirk/ansible-role-user.git
   version: 96e01ca
