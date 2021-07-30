@@ -3,7 +3,7 @@
   version: 0588f36
   name: donat-b.restic-rest
 - src: https://github.com/jkirk/ansible-role-base.git
-  version: 7fe560d
+  version: 46b39de
   name: jkirk.base
 - src: https://github.com/jkirk/ansible-role-grml-config.git
   version: 7a94275
