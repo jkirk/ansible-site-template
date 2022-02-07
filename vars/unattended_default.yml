@@ -1,0 +1,4 @@
+---
+unattended_origins_patterns:
+  - "origin=Debian,codename=${distro_codename},label=Debian" # updates including non-security updates
+  - "origin=Debian,codename=${distro_codename},label=Debian-Security" # security updates

@@ -3,11 +3,9 @@
 - name: Setup site wide unattended-upgrades configuration
   hosts: site
   become: yes
+  vars_files:
+    - [ "vars/unattended_{{ ansible_distribution_release }}.yml", "vars/unattended_default.yml" ]
   roles:
     - role: jnv.unattended-upgrades
       unattended_minimal_steps: true
-      unattended_origins_patterns: [
-        "origin=Debian,codename=${distro_codename},label=Debian-Security",
-        "origin=Debian,codename=${distro_codename},label=Debian",
-        "origin=Debian,codename=${distro_codename}-updates,label=Debian",
-      ]
+      unattended_remove_unused_dependencies: true
