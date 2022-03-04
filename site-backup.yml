@@ -9,13 +9,11 @@
   become: yes
   roles:
     - role: paulfantom.restic
-      restic_version: '0.9.5'
     - role: donat-b.restic-rest
-      restic_rest_v: '0.9.7'
       restic_rest_repos:
         - path: '/srv/backups/restic/backup01'
           listen: ':8000'
-          args: '--append-only --prometheus'
+          args: '--no-auth --append-only --prometheus'
     - role: systemd-conf
       systemd_conf_timer:
         restic-backup-prune:
