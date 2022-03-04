@@ -4,11 +4,13 @@
 #
 # Make sure that the variable dns_server is defined (i.e. in group_vars/all).
 #
-# Please note that this ansible playbook fails when running with mitogen.
+# NOTE: Please note that this ansible playbook fails when running with mitogen.
 #
 # Example:
 #
 #   ansible-playbook -u root bootstrap-template.yml
+#
+#   ansible-playbook -u root -ask-pass --limit hostname bootstrap-template.yml
 #
 #   ansible-playbook -u sysadmin -b --ask-become-password -e become_user=sysadmin bootstrap-template.yml
 
