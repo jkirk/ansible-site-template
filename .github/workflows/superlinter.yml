@@ -3,7 +3,9 @@ name: Super-Linter Code Base
 
 #
 # Documentation:
-# https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
+#
+# * https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
+# * https://github.com/marketplace/actions/super-linter
 #
 
 # Run this workflow every time a new commit pushed to your repository
@@ -12,13 +14,13 @@ on: push
 jobs:
   build:
     # Name the Job
-    name: Lint code base
+    name: Lint Code Base
     # Set the type of machine to run on
     runs-on: ubuntu-latest
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
 
       # Runs the Super-Linter action
@@ -27,3 +29,4 @@ jobs:
         env:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANSIBLE_DIRECTORY: .

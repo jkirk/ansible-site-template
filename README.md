@@ -1,5 +1,6 @@
 # Ansible site template
 
+![Lint Code Base](https://github.com/jkirk/ansible-site-template/actions/workflows/superlinter.yml/badge.svg)
 [![language en](https://img.shields.io/badge/language-en-red.svg)](README.md)
 [![language de](https://img.shields.io/badge/language-de-green.svg)](README.de.md)
 

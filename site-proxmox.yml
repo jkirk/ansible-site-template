@@ -4,4 +4,4 @@
   hosts: proxmox
   become: yes
   roles:
-    { role: jkirk.proxmox, proxmox_pveadmins: [ 'janedoe', 'johndoe' ] }
+    - { role: jkirk.proxmox, proxmox_pveadmins: [ 'janedoe', 'johndoe' ] }

@@ -14,7 +14,7 @@
         - path: '/srv/backups/restic/backup01'
           listen: ':8000'
           args: '--no-auth --append-only --prometheus'
-    - role: systemd-conf
+    - role: shibumi.systemd-conf
       systemd_conf_timer:
         restic-backup-prune:
           - Unit:
