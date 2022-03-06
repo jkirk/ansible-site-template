@@ -1,0 +1,60 @@
+---
+# Configuration File documentation: https://ansible-lint.readthedocs.io/en/latest/configuring.html#configuration-file
+#
+# Set custom configuration for ansible-lint, see:
+#
+# * https://github.com/github/super-linter/blob/main/docs/disabling-linters.md
+# * https://github.com/github/super-linter/blob/main/TEMPLATES/.ansible-lint.yml
+#
+##########################
+###########################
+### Ansible Linter rules ##
+###########################
+###########################
+#
+##############################
+## Exclude paths from linter #
+##############################
+exclude_paths:
+  - .cache/  # implicit unless exclude_paths is defined in config
+  - .github/
+  - ${HOME}/.cache
+
+########################
+# Make output parsable #
+########################
+parseable: true
+
+#######################
+# Set output to quiet #
+#######################
+quiet: false
+
+# This makes linter to fully ignore rules/tags listed below
+skip_list:
+  - 'empty-string-compare'  # Allow compare to empty string
+  - '204'  # Allow string length greater than 160 chars
+  - 'no-changed-when'  # False positives for running command shells
+  - 'command-instead-of-module'  # Allow git commands for push, add, etc...
+  - 'command-instead-of-shell'  # Allow use of shell when you want
+  - 'no-handler'  # Allow step to run like handler
+  - 'meta-no-info'  # meta/main.yml should contain relevant info
+  - 'role-name'  # Role name ansible-site-template does not match ``^[a-z][a-z0-9_]+$`` pattern (but it's actually not a role)
+  - 'yaml'  # Violations reported by yamllint
+
+# List of additional kind:pattern to be added at the top of the default
+# match list, first match determines the file kind.
+kinds:
+  - playbook: "**/site*.yml"
+  - playbook: "**/bootstrap*.yml"
+
+
+#############
+# Use rules #
+#############
+use_default_rules: true
+
+#################
+# Set verbosity #
+#################
+# verbosity: 2
