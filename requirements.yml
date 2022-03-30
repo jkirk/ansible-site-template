@@ -33,7 +33,7 @@
   version: 4052be1
   name: paulfantom.restic
 - src: https://github.com/robertdebock/ansible-role-bootstrap.git
-  version: 5.0.3
+  version: 5.2.11
   name: robertdebock.bootstrap
 - src: shibumi.systemd-conf
   version: c233062
