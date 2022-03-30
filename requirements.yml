@@ -6,7 +6,7 @@
   version: d611738
   name: jkirk.base
 - src: https://github.com/jkirk/ansible-role-grml-config.git
-  version: 4ced2a6
+  version: d4a81a3
   name: jkirk.grml-config
 - src: https://github.com/jkirk/ansible-role-letsencrypt.git
   version: 51f6e0d
