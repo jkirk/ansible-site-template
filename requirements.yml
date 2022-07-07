@@ -5,6 +5,9 @@
 - src: https://github.com/jkirk/ansible-role-base.git
   version: d611738
   name: jkirk.base
+- src: https://github.com/jkirk/ansible-role-checkmkagent.git
+  version: 4fe6230
+  name: jkirk.checkmkagent
 - src: https://github.com/jkirk/ansible-role-grml-config.git
   version: d4a81a3
   name: jkirk.grml-config
