@@ -1,6 +1,6 @@
 ---
-- src: https://github.com/jkirk/ansible-restic-rest
-  version: c04698c
+- src: https://github.com/donat-b/ansible-restic-rest
+  version: e73253b
   name: donat-b.restic-rest
 - src: https://github.com/jkirk/ansible-role-base.git
   version: d611738
