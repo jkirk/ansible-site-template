@@ -21,7 +21,7 @@
   version: da52113
   name: jkirk.template
 - src: https://github.com/jkirk/ansible-role-user.git
-  version: 6dee05e
+  version: 70bfd77
   name: jkirk.user
 - src: https://github.com/jkirk/ansible-role-website.git
   version: 94d69ea
