@@ -17,11 +17,19 @@ It should hold and describe everything to get you started.
   % ansible-galaxy -r requirements.yml install
 ```
 
-* Add administrations user in [bootstrap.yml](bootstrap.yml#L18) resp. [bootstrap-template.yml](bootstrap-template.yml#L18)
-* Update [site-base.yml](site-base.yml)
-* Update [hosts](hosts)
-* Add public SSH-key in `files/ssh/$USERNAME.pub`
+* Put host in `[site]` of [hosts](hosts)
+* Put host in `[proxmox]` of [hosts](hosts) if the given host is PBS/PVE
 * (optional) Set the variable `template_dns_server` (i.e. via `group_vars/all`)
+* Remove Proxmox apt sources enterprise.list file if given hist is PBS/PVE
+
+```console
+  ❯ ansible -u root --ask-pass -b -m file -a 'state=absent path=/etc/apt/sources.list.d/pbs-enterprise.list' $host
+  ❯ ansible -u root --ask-pass -b -m file -a 'state=absent path=/etc/apt/sources.list.d/pve-enterprise.list' $host
+```
+
+* Set administration users in [bootstrap.yml](bootstrap.yml#L34)
+* Set administration users in [site-base.yml](site-base.yml)
+* Add public SSH-key in `files/ssh/$USERNAME.pub`
 
 ## Overview Ansible roles
 
@@ -44,10 +52,10 @@ It should hold and describe everything to get you started.
 * Review DNS server in [bootstrap.yml](bootstrap.yml#L14) resp. [bootstrap-template.yml](bootstrap-template.yml#L14)
 
 ```console
-  % ansible-playbook -D -u root --limit myserver01.example.com bootstrap.yml # with public key authentication
+  % ansible-playbook -u root --limit myserver01.example.com bootstrap.yml # with public key authentication
   [...]
 
-  % ansible-playbook -D -u root -k --limit myserver01.example.com bootstrap.yml # with password authentication
+  % ansible-playbook -u root -ask-pass --limit myserver01.example.com bootstrap.yml # with password authentication
   [...]
 ```
 
