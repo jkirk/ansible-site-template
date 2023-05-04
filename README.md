@@ -18,14 +18,38 @@ It should hold and describe everything to get you started.
 ```
 
 * Put host in `[site]` of [hosts](hosts)
-* Put host in `[proxmox]` of [hosts](hosts) if the given host is PBS/PVE
 * (optional) Set the variable `template_dns_server` (i.e. via `group_vars/all`)
-* Remove Proxmox apt sources enterprise.list file if given hist is PBS/PVE
+* If the given host is a PBS:
 
-```console
-  ❯ ansible -u root --ask-pass -b -m file -a 'state=absent path=/etc/apt/sources.list.d/pbs-enterprise.list' $host
-  ❯ ansible -u root --ask-pass -b -m file -a 'state=absent path=/etc/apt/sources.list.d/pve-enterprise.list' $host
-```
+  * Put host in `[pbs]` of [hosts](hosts)
+  * Put the following line in `group_vars/pbs.yml`:
+
+  ```yaml
+  ---
+  hostname_hostname_ip_address: "{{ ansible_default_ipv4.address }}"
+  ```
+
+  * Remove Proxmox apt sources enterprise.list file
+
+  ```console
+    ❯ ansible -u root --ask-pass -b -m file -a 'state=absent path=/etc/apt/sources.list.d/pbs-enterprise.list' $host
+  ```
+
+* If the given host is a PVE:
+
+  * Put host in `[proxmox]` of [hosts](hosts)
+  * Put the following line in `group_vars/proxmox.yml`:
+
+  ```yaml
+  ---
+  hostname_hostname_ip_address: "{{ ansible_default_ipv4.address }}"
+  ```
+
+  * Remove Proxmox apt sources enterprise.list file
+
+  ```console
+    ❯ ansible -u root --ask-pass -b -m file -a 'state=absent path=/etc/apt/sources.list.d/pve-enterprise.list' $host
+  ```
 
 * Set administration users in [bootstrap.yml](bootstrap.yml#L34)
 * Set administration users in [site-base.yml](site-base.yml)

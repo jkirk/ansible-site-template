@@ -5,11 +5,16 @@
 # Make sure the following things have been done:
 #
 # - put the host in [site] of hosts file
-# - if the given host is a PBS or PVE put the host in [proxmox] of hosts file
+# - if the given host is a PBS or PVE put the host in [proxmox] / [pbs] of hosts file
 # - if the given host is a PBS or PVE remove the Proxmox apt sources enterprise.list file
 #
-#  ❯ ansible -u root --ask-pass -b -m file -a 'state=absent path=/etc/apt/sources.list.d/pbs-enterprise.list' $host
-#  ❯ ansible -u root --ask-pass -b -m file -a 'state=absent path=/etc/apt/sources.list.d/pve-enterprise.list' $host
+#   ❯ ansible -u root --ask-pass -b -m file -a 'state=absent path=/etc/apt/sources.list.d/pbs-enterprise.list' $host
+#   ❯ ansible -u root --ask-pass -b -m file -a 'state=absent path=/etc/apt/sources.list.d/pve-enterprise.list' $host
+#
+# - put the following line in `group_vars/proxmox.yml` / `groupvars/pbs.yml`:
+#
+#   ---
+#   hostname_hostname_ip_address: "{{ ansible_default_ipv4.address }}"
 #
 # - make sure that the variable dns_server is defined (i.e. in group_vars/all).
 # - adjust users variable of the ansible role jkirk.user below
