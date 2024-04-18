@@ -26,7 +26,11 @@
 - src: https://github.com/jkirk/ansible-role-website.git
   version: 94d69ea
   name: jkirk.website
+- src: https://github.com/hifis-net/ansible-role-unattended-upgrades
+  version: v3.3.0
+  name: hifis.unattended-upgrades
 - src: https://github.com/jnv/ansible-role-unattended-upgrades.git
+  # This role replaces the deprecated role jnv.unattended-upgrades, please migrate to hifis.unattended-upgrades
   version: f9e09a3
   name: jnv.unattended-upgrades
 - src: https://github.com/Oefenweb/ansible-hostname
