@@ -33,7 +33,7 @@
   version: fd9e966
   name: Oefenweb.hostname
 - src: https://github.com/jkirk/ansible-restic.git
-  version: 4052be1
+  version: b9dddd7
   name: paulfantom.restic
 - src: https://github.com/robertdebock/ansible-role-bootstrap.git
   version: 6.2.4
