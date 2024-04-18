@@ -3,7 +3,7 @@
   version: e73253b
   name: donat-b.restic-rest
 - src: https://github.com/jkirk/ansible-role-base.git
-  version: ca54f2e
+  version: c91e32d
   name: jkirk.base
 - src: https://github.com/jkirk/ansible-role-checkmkagent.git
   version: 2bf0666
