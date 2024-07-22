@@ -4,10 +4,10 @@ roles:
   version: e73253b
   name: donat-b.restic-rest
 - src: https://github.com/jkirk/ansible-role-base.git
-  version: c91e32d
+  version: bdae06a
   name: jkirk.base
 - src: https://github.com/jkirk/ansible-role-checkmkagent.git
-  version: 2bf0666
+  version: 0d86d36
   name: jkirk.checkmkagent
 - src: https://github.com/jkirk/ansible-role-grml-config.git
   version: d4a81a3
@@ -32,7 +32,7 @@ roles:
   name: jnv.unattended-upgrades
   # This role is deprecated, please migrate to role hifis.toolkit.unattended_upgrades
 - src: https://github.com/Oefenweb/ansible-hostname
-  version: fd9e966
+  version: v2.0.24
   name: Oefenweb.hostname
 - src: https://github.com/jkirk/ansible-restic.git
   version: b9dddd7
