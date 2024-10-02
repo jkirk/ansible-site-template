@@ -65,11 +65,17 @@ It should hold and describe everything to get you started.
 * [jkirk/ansible-role-template](https://github.com/jkirk/ansible-role-template)
 * [jkirk/ansible-role-user](https://github.com/jkirk/ansible-role-user)
 * [jkirk/ansible-role-website](https://github.com/jkirk/ansible-role-website)
-* [jnv.unattended-upgrades](https://github.com/jnv/ansible-role-unattended-upgrades)
 * [Oefenweb/ansible-hostname](https://github.com/Oefenweb/ansible-hostname)
 * [paulfantom/ansible-restic](https://github.com/jkirk/ansible-restic.git)
 * [robertdebock/ansible-role-bootstrap](https://github.com/robertdebock/ansible-role-bootstrap)
+* [robertdebock/ansible-role-users](https://github.com/robertdebock/ansible-role-users)
 * [shibumi/ansible-systemd-conf](https://github.com/shibumi/ansible-systemd-conf)
+
+## Overview Ansible collections
+
+* [hifis-net/ansible-collection-toolkit](https://github.com/hifis-net/ansible-collection-toolkit)
+
+> **__NOTE:__** `hifis.toolkit` replaced [jnv.unattended-upgrades](https://github.com/jnv/ansible-role-unattended-upgrades)
 
 ### bootstrap
 
