@@ -10,7 +10,7 @@ roles:
   version: 0d86d36
   name: jkirk.checkmkagent
 - src: https://github.com/jkirk/ansible-role-grml-config.git
-  version: d4a81a3
+  version: 52e0472
   name: jkirk.grml-config
 - src: https://github.com/jkirk/ansible-role-letsencrypt.git
   version: 51f6e0d
