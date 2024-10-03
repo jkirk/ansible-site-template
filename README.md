@@ -1,6 +1,6 @@
 # Ansible site template
 
-![Lint Code Base](https://github.com/jkirk/ansible-site-template/actions/workflows/linter.yml/badge.svg)
+[![Lint Code Base](https://github.com/jkirk/ansible-site-template/actions/workflows/linter.yml/badge.svg)](https://github.com/jkirk/ansible-site-template/actions/workflows/linter.yml)
 [![language en](https://img.shields.io/badge/language-en-red.svg)](README.md)
 [![language de](https://img.shields.io/badge/language-de-green.svg)](README.de.md)
 
@@ -75,7 +75,7 @@ It should hold and describe everything to get you started.
 
 * [hifis-net/ansible-collection-toolkit](https://github.com/hifis-net/ansible-collection-toolkit)
 
-> **__NOTE:__** `hifis.toolkit` replaced [jnv.unattended-upgrades](https://github.com/jnv/ansible-role-unattended-upgrades)
+> **NOTE:** `hifis.toolkit` replaced [jnv.unattended-upgrades](https://github.com/jnv/ansible-role-unattended-upgrades)
 
 ### bootstrap
 
