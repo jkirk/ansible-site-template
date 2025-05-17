@@ -4,13 +4,13 @@ roles:
   version: e73253b
   name: donat-b.restic-rest
 - src: https://github.com/jkirk/ansible-role-base.git
-  version: d99c080
+  version: abd1a6a
   name: jkirk.base
 - src: https://github.com/jkirk/ansible-role-checkmkagent.git
   version: 0d86d36
   name: jkirk.checkmkagent
 - src: https://github.com/jkirk/ansible-role-grml-config.git
-  version: 52e0472
+  version: d972a04
   name: jkirk.grml-config
 - src: https://github.com/jkirk/ansible-role-letsencrypt.git
   version: 51f6e0d
@@ -22,7 +22,7 @@ roles:
   version: 63ec571
   name: jkirk.template
 - src: https://github.com/jkirk/ansible-role-user.git
-  version: aca6d78
+  version: 75a115b
   name: jkirk.user
 - src: https://github.com/jkirk/ansible-role-website.git
   version: 94d69ea
@@ -35,7 +35,7 @@ roles:
   version: v2.0.24
   name: Oefenweb.hostname
 - src: https://github.com/jkirk/ansible-restic.git
-  version: b9dddd7
+  version: 79ceec9
   name: paulfantom.restic
 - src: https://github.com/robertdebock/ansible-role-bootstrap.git
   version: 6.2.4
